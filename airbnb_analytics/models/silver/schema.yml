@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: silver_hosts
+    description: "Hôtes nettoyés avec types corrects"
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
+
+  - name: silver_listings
+    description: "Logements nettoyés"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+          - unique
+      - name: price
+        tests:
+          - not_null
+
+  - name: silver_reviews
+    description: "Avis nettoyés"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+      - name: review_date
+        tests:
+          - not_null
