@@ -1,0 +1,10 @@
+﻿@"
+venv/
+*.duckdb
+__pycache__/
+target/
+dbt_packages/
+logs/
+.dbt/
+data/
+"@ | Out-File -Encoding utf8 .gitignore
